@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blockchain Client</title>
+
+  <link rel="stylesheet" href="../static/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../static/vendor/font-awesome/font-awesome.min.css">
+  <link rel="stylesheet" href="../static/vendor/DataTables/css/datatables.min.css">
+  <link rel="stylesheet" href="../static/css/custom.css">
+
+  <script src="../static/vendor/jquery/jquery.min.js"></script>
+  <script src="../static/vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../static/vendor/DataTables/js/datatables.min.js"></script>
+  <script src="../static/vendor/DataTables/js/ellipsis.js"></script>
+  <script src="../static/vendor/sweetalert2/sweetalert2.min.js"></script>
+  <script src="../static/js/custom.js"></script>
+</head>
+
+<body>
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-dark primary-color">
+    <!-- Navbar brand -->
+    <a class="navbar-brand" href="#">Blockchain Client</a>
+    <!-- Collapse button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+      aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="basicExampleNav">
+      <!-- Links -->
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Wallet Generator</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/make/transaction">Make Transaction</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/view/transactions">View Transactions</a>
+        </li>
+        <!-- Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">User</a>
+          <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item waves-effect waves-light" target="_blank" href="https://github.com/ChungPhamVan">Github</a>
+            <a class="dropdown-item waves-effect waves-light" target="_blank" href="https://facebook.com/programedLife">Facebook</a>
+            <a class="dropdown-item waves-effect waves-light" target="_blank" href="">Web page</a>
+          </div>
+        </li>
+      </ul>
+      <!-- Links -->
+      <form class="form-inline">
+        <div class="md-form my-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+        </div>
+      </form>
+    </div>
+    <!-- Collapsible content -->
+  </nav>
+  <!--/.Navbar-->
+  <div class="container">
+    <div class="row d-block">
+      <h1 class="text-center mt-5">
+        Wallet Generator
+      </h1>
+      <h6 class="text-center mt-3">
+        Click on the button below to generate your blockchain wallet
+      </h6>
+      <div class="w-100 mt-4">
+        <button class="d-block btn btn-primary m-auto" id="generate-wallet">Generate Wallet</button>
+      </div>
+    </div>
+    <div class="row w-100 mt-5 d-block">
+      <div class="d-flex w-75 m-auto">
+        <label for="public-key" class="public-key-label">Public key</label>
+        <div class="flex-grow-1 box-textarea">
+          <textarea class="scrollbar" name="public-key" id="public-key" cols="100"
+            rows="5" readonly onfocus="setbgpublic('#e5fff3');" onblur="setbgpublic('#eaeaea')">
+          </textarea>
+        </div>
+      </div>
+      <div class="d-flex justify-content-end w-75 m-auto">
+        <button class="btn btn-primary btn-sm" onclick="copyPublicKey()">Copy Public Key</button>
+      </div>
+    </div>
+
+    <div class="row w-100 mt-5 d-block">
+      <div class="d-flex w-75 m-auto">
+        <label for="private-key" class="private-key-label">Private key</label>
+        <div class="flex-grow-1 box-textarea">
+          <textarea class="scrollbar" name="private-key" id="private-key" cols="100"
+            rows="7" readonly onfocus="setbgprivate('#e5fff3');" onblur="setbgprivate('#eaeaea')">
+          </textarea>
+        </div>
+      </div>
+      <div class="d-flex justify-content-end w-75 m-auto">
+        <button class="btn btn-primary btn-sm" onclick="copyPrivateKey()">Copy Private Key</button>
+      </div>
+    </div>
+
+    <div class="row w-100 mt-5 d-none" id="warning">
+      <div class="w-75 m-auto">
+        <div class="alert alert-danger">
+          <h6>IMPORTANT</h6>
+          <ul>
+            <li>Save you private and public keys (Click on the button to copy). These keys cannot be receivered!</li>
+            <li>Don't shared your private key with anyone!</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

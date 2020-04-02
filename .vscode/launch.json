@@ -1,0 +1,45 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name":"Alice",
+      "type":"python",
+      "request":"launch",
+      "program": "${workspaceFolder}/blockchain_client/blockchain_client.py",
+      "console":"integratedTerminal",
+      "args" : ["--port", "8081"]
+    },
+    {
+      "name":"Bob",
+      "type":"python",
+      "request":"launch",
+      "program": "${workspaceFolder}/blockchain_client/blockchain_client.py",
+      "console":"integratedTerminal",
+      "args" : ["--port", "8082"]
+    },
+    {
+      "name": "Node1",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/blockchain/blockchain.py",
+      "console": "integratedTerminal",
+      "args" : ["--port", "5001"]
+    },
+    {
+      "name": "Node2",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/blockchain/blockchain.py",
+      "console": "integratedTerminal",
+      "args" : ["--port", "5002"]
+    },
+    {
+      "name": "Node3",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/blockchain/blockchain.py",
+      "console": "integratedTerminal",
+      "args" : ["--port", "5003"]
+    }
+  ]
+}
