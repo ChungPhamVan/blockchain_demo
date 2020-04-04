@@ -1,0 +1,87 @@
+body {
+  padding-top: 0;
+}
+
+.primary-color, ul.stepper li.active a .circle, ul.stepper li.completed a .circle {
+	background-color: #4285f4 !important;
+}
+
+.dropdown-item {
+	padding: 0.5rem;
+}
+
+.dropdown-item:hover {
+	background-color: #4285f4 !important;
+}
+
+.dropdown-menu {
+	padding: 0.5rem;
+}
+
+#navbarDropdownMenuLink {
+	cursor: pointer!important;
+}
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+	transition: all .2s ease-in-out;
+}
+
+.public-key-label, .private-key-label {
+	width: 20%;
+}
+
+div.box-textarea {
+	flex-grow: 1;
+}
+
+#public-key {
+	background-color: #eaeaea;
+}
+
+#private-key {
+	background-color: #eaeaea;
+}
+
+.scrollbar
+{
+	float: left;
+	background: #F5F5F5;
+	overflow-y: scroll;
+	margin-bottom: 10px;
+}
+
+#public-key::-webkit-scrollbar-track
+{
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+#public-key::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: #F5F5F5;
+}
+
+#public-key::-webkit-scrollbar-thumb
+{
+	background-color: #000000;
+}
+
+#private-key::-webkit-scrollbar-track
+{
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+#private-key::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: #F5F5F5;
+}
+
+#private-key::-webkit-scrollbar-thumb
+{
+	background-color: #000000;
+}
